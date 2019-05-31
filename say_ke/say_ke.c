@@ -92,17 +92,12 @@ PHP_FUNCTION(say_ke)
 		RETURN_NULL();
 	}
 	*/
+	php_printf("Hello : ");
 	if(name){
 		php_printf("name is null\n");
+	}else{
+		PHPWRITE(name, name_len);
 	}
-
-	if(name_len){
-		php_printf("name_len is null\n");
-	}
-
-	php_printf("Hello ");
-	PHPWRITE(name, name_len);
-	php_printf("\n");
 	RETURN_TRUE;
 }
 
